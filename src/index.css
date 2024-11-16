@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply bg-[#121212] text-white;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#1E1E1E];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Slider customization */
+input[type="range"] {
+  @apply appearance-none bg-gray-700 h-2 rounded-lg;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-emerald-500 rounded-full cursor-pointer;
+}
+
+/* Checkbox customization */
+input[type="checkbox"] {
+  @apply rounded border-gray-700 text-emerald-500 focus:ring-emerald-500 focus:ring-offset-0 focus:ring-2 bg-[#121212];
+}
